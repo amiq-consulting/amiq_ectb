@@ -1,5 +1,5 @@
 session dvcon_simple_reg {
-    top_dir: "/home/$ATTR(user)/git/dvcon/dvcon2022/sim_dir";
+    top_dir: "/home/$ATTR(user)/git/amiq_ectb/sim_dir";
     pre_session_script: "xrun -f /home/$ATTR(user)/git/dvcon/dvcon2022/sim/sim_args -c";
     output_mode: terminal;
     queuing_policy: round_robin;
@@ -8,14 +8,14 @@ session dvcon_simple_reg {
 
 group dvon_simple_tests {
     scan_script : "vm_scan.pl shell.flt ius.flt ovm_sv_lib.flt vm.flt";
-    run_script : "xrun -f /home/$ATTR(user)/git/dvcon/dvcon2022/sim/sim_args $ATTR(top_files) -seed random -svseed random";
+    run_script : "xrun -f /home/$ATTR(user)/git/amiq_ectb/sim/sim_args $ATTR(top_files) -seed random -svseed random";
     timeout: 600;
     user: user
     
     test dvcon_simple_test {
         top_files: "-f  /home/$ATTR(user)/git/dvcon/dvcon2022/scripts/plusarg_gen/Object_definition.args \
-        -f /home/$ATTR(user)/git/dvcon/dvcon2022/scripts/plusarg_gen/Sequence_definition.args \
-        -f /home/$ATTR(user)/git/dvcon/dvcon2022/scripts/plusarg_gen/Verification_Environment.args";
+        -f /home/$ATTR(user)/git/amiq_ectb/scripts/plusarg_gen/Sequence_definition.args \
+        -f /home/$ATTR(user)/git/amiq_ectb/scripts/plusarg_gen/Verification_Environment.args";
         count: 10;
     };
     
