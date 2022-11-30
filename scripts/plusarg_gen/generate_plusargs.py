@@ -83,8 +83,6 @@ def process_excel(tb_structure):
 					object_type = row[1];
 					if row[2]:
 						object_name = row[2]
-					#else : //TODO 
-						# sequence_name = dict[sequence_type]
 					file.write("+%s_obj%d=%s\n" %(parent, obj_index, object_type))	
 					
 					if row[2]:
