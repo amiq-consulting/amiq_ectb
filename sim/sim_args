@@ -1,0 +1,42 @@
+-64bit
+-coverage all
+-covoverwrite
+-access +rwc
+// -linedebug
+-sv
+-uvm
+
+-timescale 1ns/1ns
+-disable_sem2009
++UVM_NO_RELNOTES
+
+
+
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_red
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_blue
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_purple
++incdir+/home/$USER/git/dvcon/dvcon2022/sv
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/sv
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/sv/seq_lib
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/tc
++incdir+/home/$USER/git/dvcon/dvcon2022/tb/src
+
+
+
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_red/amiq_dvcon_tb_vip_red_if.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_blue/amiq_dvcon_tb_vip_blue_if.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_purple/amiq_dvcon_tb_vip_purple_if.sv
+/home/$USER/git/dvcon/dvcon2022/sv/amiq_ectb_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_red/amiq_dvcon_tb_vip_red_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_blue/amiq_dvcon_tb_vip_blue_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/tb_vip_purple/amiq_dvcon_tb_vip_purple_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/amiq_dvcon_tb_env_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/sv/seq_lib/amiq_dvcon_tb_seq_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/tc/amiq_dvcon_tb_tc_pkg.sv
+/home/$USER/git/dvcon/dvcon2022/tb/src/amiq_dvcon_top.sv
+
+
+// Top module
+-top amiq_dvcon_top
+
++UVM_TESTNAME=amiq_dvcon_tb_tc
