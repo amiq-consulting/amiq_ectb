@@ -1,6 +1,7 @@
 +amiq_dvcon_tb_env_comp0=amiq_dvcon_tb_vip_red_agent
 +amiq_dvcon_tb_env_comp0_no=2
 +amiq_dvcon_tb_env_comp1=amiq_dvcon_tb_vip_blue_agent
++amiq_dvcon_tb_env_comp1_no=1
 +amiq_dvcon_tb_env_comp2=amiq_dvcon_tb_vip_purple_agent
 +amiq_dvcon_tb_env_comp2_no=3
 +amiq_dvcon_tb_env_comp3=amiq_dvcon_tb_coverage_collector

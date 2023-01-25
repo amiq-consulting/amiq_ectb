@@ -42,21 +42,21 @@ class amiq_dvcon_tb_coverage_collector extends uvm_component;
         red_field0 : coverpoint red_item.field0 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         red_field1 : coverpoint red_item.field1 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         red_field2 : coverpoint red_item.field2 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         

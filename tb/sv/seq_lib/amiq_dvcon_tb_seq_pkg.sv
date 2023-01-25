@@ -22,6 +22,7 @@ package amiq_dvcon_tb_seq_pkg;
     import amiq_dvcon_tb_vip_purple_pkg::*;
     import amiq_dvcon_tb_env_pkg::*;
     
+    `include "amiq_dvcon_tb_dynamic_constraint.svh"
     `include "amiq_dvcon_tb_seq0.svh"
     
 endpackage

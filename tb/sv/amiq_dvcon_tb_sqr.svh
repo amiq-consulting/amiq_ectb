@@ -18,9 +18,9 @@ class amiq_dvcon_tb_sqr extends uvm_sequencer;
     `uvm_component_utils(amiq_dvcon_tb_sqr)
     
     // Red agents
-    uvm_sequencer red_agent_sequencer[2];
-    uvm_sequencer blue_agent_sequencer[1];
-    uvm_sequencer purple_agent_sequencer[3];
+    uvm_sequencer red_agent_sequencers[$];
+    uvm_sequencer blue_agent_sequencers[$];
+    uvm_sequencer purple_agent_sequencers[$];
 
     function new(string name, uvm_component parent);
         super.new(name, parent);
