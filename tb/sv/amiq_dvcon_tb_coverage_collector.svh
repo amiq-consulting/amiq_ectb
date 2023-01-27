@@ -71,21 +71,21 @@ class amiq_dvcon_tb_coverage_collector extends uvm_component;
         blue_field0 : coverpoint blue_item.field0 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         blue_field1 : coverpoint blue_item.field1 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         blue_field2 : coverpoint blue_item.field2 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
@@ -100,21 +100,21 @@ class amiq_dvcon_tb_coverage_collector extends uvm_component;
         purple_field0 : coverpoint purple_item.field0 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         purple_field1 : coverpoint purple_item.field1 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         
         purple_field2 : coverpoint purple_item.field2 
         {
             bins low[5] = {0, 1, 2, 3, 4};
-            bins med[10] = {[5:max_int-6]};
+            bins med[90] = {[5:max_int-6]};
             bins high[5] = {max_int-5, max_int-4, max_int-3, max_int-2, max_int-1};
         }
         

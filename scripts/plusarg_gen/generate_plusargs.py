@@ -45,8 +45,12 @@ def process_excel(tb_structure):
 			if row[0] :
 				if(generate_components): 
 					file.write("+%s_comp%s=%s\n" %(row[0], comp_index, row[1]))
-					file.write("+%s_comp%s_name=%s\n" %(row[0], comp_index, row[2]))
-					file.write("+%s_comp%s_no=%s\n" %(row[0], comp_index, row[3]))
+					if (row[2] and row[3]):
+						file.write("+%s_comp%s_name=%s\n" %(row[0], comp_index, row[2]))
+						file.write("+%s_comp%s_no=%s\n" %(row[0], comp_index, row[3]))
+					else:
+						file.write("+%s_comp%s_name=%s\n" %(row[0], comp_index, row[1]))
+						file.write("+%s_comp%s_no=1\n" %(row[0], comp_index))
 					file.write("\n" )
 					comp_index = comp_index + 1
 			
@@ -89,7 +93,7 @@ def process_excel(tb_structure):
 						file.write("+%s_obj%d_name=%s\n" %(parent, obj_index, object_name))	
 					
 					obj_index = obj_index + 1; 
-				if (row[3] and row[4]):
+				if (row[3]!=None and row[4]!=None):
 					file.write("+%s_%s=%s\n" %(object_name, row[3], row[4] ))						
 
 		file.close()

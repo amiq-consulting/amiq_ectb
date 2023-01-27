@@ -48,6 +48,30 @@ class amiq_dvcon_tb_seq0 extends amiq_ectb_sequence;
 	function new(string name = "amiq_dvcon_tb_seq0");
 		super.new(name);
 		
+	endfunction : new
+
+	// Sequence body
+	virtual task body();
+
+		fork
+			repeat(red_pkt_nr) begin
+				drive_red_packet();
+			end
+
+          repeat(blue_pkt_nr) begin
+              drive_blue_packet();
+          end
+
+          repeat(purple_pkt_nr) begin
+              drive_purple_packet();
+          end
+		join
+
+	endtask
+
+	virtual function void register_all_vars();
+		super.register_all_vars();
+		
 		red_pkt_nr 		= int_reg("red_pkt_nr", 10000);
 		red_agent_id 	= int_reg("red_agent_id", 0);
 
@@ -77,38 +101,6 @@ class amiq_dvcon_tb_seq0 extends amiq_ectb_sequence;
 		purple_field0_constraints.register_all_vars();
 		purple_field1_constraints.register_all_vars();
 		purple_field2_constraints.register_all_vars();
-
-	endfunction : new
-
-	// Sequence body
-	virtual task body();
-
-		fork
-			repeat(red_pkt_nr) begin
-				drive_red_packet();
-			end
-
-          repeat(blue_pkt_nr) begin
-              drive_blue_packet();
-          end
-
-          repeat(purple_pkt_nr) begin
-              drive_purple_packet();
-          end
-		join
-
-	endtask
-
-	virtual function void register_all_vars();
-		super.register_all_vars();
-		red_pkt_nr = int_reg("red_pkt_nr");
-		red_agent_id = int_reg("red_agent_id");
-
-		blue_pkt_nr = int_reg("blue_pkt_nr");
-		blue_agent_id = int_reg("blue_agent_id");
-
-		purple_pkt_nr = int_reg("purple_pkt_nr");
-		purple_agent_id = int_reg("purple_agent_id");
 
 	endfunction : register_all_vars
 

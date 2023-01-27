@@ -7,7 +7,6 @@
 +seq1_name=amiq_dvcon_tb_seq0_1
 +seq1_p=1
 +amiq_dvcon_tb_seq0_1_blue_pkt_nr=3000
-+amiq_dvcon_tb_seq0_1_blue_agent_id=0
 
 +seq2=amiq_dvcon_tb_seq0
 +seq2_name=amiq_dvcon_tb_seq0_2

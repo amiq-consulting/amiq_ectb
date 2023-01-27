@@ -68,19 +68,19 @@ endfunction
 
 function string retrieve_obj_type(int index);
 	string name_obj_index = $sformatf("%0s_obj%0d", get_name(), index);
-	`uvm_info(get_name(), $sformatf("Looking for obj %s", name_obj_index), UVM_NONE)
+	`uvm_info(get_name(), $sformatf("Looking for obj %s", name_obj_index), UVM_DEBUG)
 	if(!$value$plusargs({name_obj_index, "=%0s"}, retrieve_obj_type)) retrieve_obj_type = "";
 endfunction
 
 function int retrieve_obj_number(int index);
 	string name_obj_index_no = $sformatf("%0s_obj%0d_no", get_name(), index);
-	`uvm_info(get_name(), $sformatf("Looking for no %s", name_obj_index_no), UVM_NONE)
+	`uvm_info(get_name(), $sformatf("Looking for no %s", name_obj_index_no), UVM_DEBUG)
 	if(!$value$plusargs({name_obj_index_no, "=%0d"}, retrieve_obj_number)) retrieve_obj_number = 1;
 endfunction
 
 function string retrieve_obj_name(int index);
 	string name_obj_index_name = $sformatf("%0s_obj%0d_name", get_name(), index);
-	`uvm_info(get_name(), $sformatf("Looking for name %s", name_obj_index_name), UVM_NONE)
+	`uvm_info(get_name(), $sformatf("Looking for name %s", name_obj_index_name), UVM_DEBUG)
 	if(!$value$plusargs({name_obj_index_name, "=%0s"}, retrieve_obj_name)) retrieve_obj_name = "";
 endfunction
 

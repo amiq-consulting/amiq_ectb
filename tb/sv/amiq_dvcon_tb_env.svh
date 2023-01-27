@@ -159,22 +159,24 @@ class amiq_dvcon_tb_env extends amiq_ectb_environment;
 	 * @param phase -
 	 */
 	virtual function void connect_phase(uvm_phase phase);
-		if(cov_collector != null) begin
 
-			foreach(my_red_agents[i]) begin
+		foreach(my_red_agents[i]) begin
+			if(cov_collector != null)
 				my_red_agents[i].m_monitor.m_collected_item_port.connect(cov_collector.m_red_monitor_port);
-				virtual_sequencer.red_agent_sequencers.push_back(my_red_agents[i].m_sequencer);
-			end
-			foreach(my_blue_agents[i]) begin
-				my_blue_agents[i].m_monitor.m_collected_item_port.connect(cov_collector.m_blue_monitor_port);
-				virtual_sequencer.blue_agent_sequencers.push_back(my_blue_agents[i].m_sequencer);
-			end
-			foreach(my_purple_agents[i]) begin
-				my_purple_agents[i].m_monitor.m_collected_item_port.connect(cov_collector.m_purple_monitor_port);
-				virtual_sequencer.purple_agent_sequencers.push_back(my_purple_agents[i].m_sequencer);
-			end
-
+			virtual_sequencer.red_agent_sequencers.push_back(my_red_agents[i].m_sequencer);
 		end
+		foreach(my_blue_agents[i]) begin
+			if(cov_collector != null)
+				my_blue_agents[i].m_monitor.m_collected_item_port.connect(cov_collector.m_blue_monitor_port);
+			virtual_sequencer.blue_agent_sequencers.push_back(my_blue_agents[i].m_sequencer);
+		end
+		foreach(my_purple_agents[i]) begin
+			if(cov_collector != null)
+				my_purple_agents[i].m_monitor.m_collected_item_port.connect(cov_collector.m_purple_monitor_port);
+			virtual_sequencer.purple_agent_sequencers.push_back(my_purple_agents[i].m_sequencer);
+		end
+
+
 	endfunction : connect_phase
 
 

@@ -64,19 +64,19 @@ endfunction
 
 function string retrieve_comp_type(int index);
     string name_comp_index = $sformatf("%0s_comp%0d", get_name(), index);
-    `uvm_info(get_name(), $sformatf("Looking for comp %s", name_comp_index), UVM_NONE)
+    `uvm_info(get_name(), $sformatf("Looking for comp %s", name_comp_index), UVM_DEBUG)
     if(!$value$plusargs({name_comp_index, "=%0s"}, retrieve_comp_type)) retrieve_comp_type = "";
 endfunction
 
 function int retrieve_comp_number(int index);
     string name_comp_index_no = $sformatf("%0s_comp%0d_no", get_name(), index);
-    `uvm_info(get_name(), $sformatf("Looking for no %s", name_comp_index_no), UVM_NONE)
+    `uvm_info(get_name(), $sformatf("Looking for no %s", name_comp_index_no), UVM_DEBUG)
     if(!$value$plusargs({name_comp_index_no, "=%0d"}, retrieve_comp_number)) retrieve_comp_number = 1;
 endfunction
 
 function string retrieve_comp_name(int index);
     string name_comp_index_name = $sformatf("%0s_comp%0d_name", get_name(), index);
-    `uvm_info(get_name(), $sformatf("Looking for name %s", name_comp_index_name), UVM_NONE)
+    `uvm_info(get_name(), $sformatf("Looking for name %s", name_comp_index_name), UVM_DEBUG)
     if(!$value$plusargs({name_comp_index_name, "=%0s"}, retrieve_comp_name)) retrieve_comp_name = "";
 endfunction
 
