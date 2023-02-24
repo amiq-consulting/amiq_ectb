@@ -360,9 +360,4 @@ def update_seq_plusargs(coverage_dict, path_to_args):
                 print_all_remaining_tests(coverage_dict)
 
 
-'''    
 
-def update_seq_plusargs(coverage_dict, path_to_args):
-    print_all_tests(coverage_dict)
-
-'''
