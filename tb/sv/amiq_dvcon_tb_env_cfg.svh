@@ -44,6 +44,7 @@ class amiq_dvcon_tb_env_cfg extends amiq_ectb_object;
 
     function new (string name = "amiq_dvcon_tb_env_cfg");
         super.new(name);
+        register_all_vars();
     endfunction : new
 
     virtual function void register_all_vars();
@@ -110,6 +111,8 @@ class amiq_dvcon_tb_env_cfg extends amiq_ectb_object;
         purple_vip_has_coverage[4] = bit_reg("purple_vip4_has_coverage", 1);
         purple_vip_has_checks[5]   = bit_reg("purple_vip5_has_checks", 1);
         purple_vip_has_coverage[5] = bit_reg("purple_vip5_has_coverage", 1);
+        
+        `uvm_info(get_name(), $sformatf("Red vip is active: %p",red_vip_is_active), UVM_NONE)
     endfunction
 
 endclass : amiq_dvcon_tb_env_cfg

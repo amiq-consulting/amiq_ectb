@@ -31,7 +31,7 @@ class amiq_dvcon_tb_tc extends amiq_ectb_test;
         set_type_override_by_type(amiq_ectb_environment::get_type(), amiq_dvcon_tb_env::get_type());
         super.build_phase(phase);
         
-        env_cfg = new("env_cfg");
+        env_cfg = amiq_dvcon_tb_env_cfg::type_id::create("env_cfg");
         my_env = amiq_dvcon_tb_env::type_id::create("amiq_dvcon_tb_env", this);
         my_env.env_cfg = env_cfg;
         

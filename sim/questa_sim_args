@@ -1,0 +1,29 @@
+-64
+-timescale 1ns/1ps
+-sv
+-mfcu
+-cover bcesfx
+-dpiheader dpi_types.h
++acc=a
+
++incdir+$PROJ_HOME/tb/sv/tb_vip_red
++incdir+$PROJ_HOME/tb/sv/tb_vip_blue
++incdir+$PROJ_HOME/tb/sv/tb_vip_purple
++incdir+$PROJ_HOME/sv
++incdir+$PROJ_HOME/tb/sv
++incdir+$PROJ_HOME/tb/sv/seq_lib
++incdir+$PROJ_HOME/tb/tc
++incdir+$PROJ_HOME/tb/src
+
+
+$PROJ_HOME/tb/sv/tb_vip_red/amiq_dvcon_tb_vip_red_if.sv
+$PROJ_HOME/tb/sv/tb_vip_blue/amiq_dvcon_tb_vip_blue_if.sv
+$PROJ_HOME/tb/sv/tb_vip_purple/amiq_dvcon_tb_vip_purple_if.sv
+$PROJ_HOME/sv/amiq_ectb_pkg.sv
+$PROJ_HOME/tb/sv/tb_vip_red/amiq_dvcon_tb_vip_red_pkg.sv
+$PROJ_HOME/tb/sv/tb_vip_blue/amiq_dvcon_tb_vip_blue_pkg.sv
+$PROJ_HOME/tb/sv/tb_vip_purple/amiq_dvcon_tb_vip_purple_pkg.sv
+$PROJ_HOME/tb/sv/amiq_dvcon_tb_env_pkg.sv
+$PROJ_HOME/tb/sv/seq_lib/amiq_dvcon_tb_seq_pkg.sv
+$PROJ_HOME/tb/tc/amiq_dvcon_tb_tc_pkg.sv
+$PROJ_HOME/tb/src/amiq_dvcon_top.sv
